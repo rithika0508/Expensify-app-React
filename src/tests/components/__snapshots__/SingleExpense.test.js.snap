@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render single expenses 1`] = `
+<div>
+  <NavLink
+    to="/edit/1"
+  >
+    <h3>
+      Water Bill
+    </h3>
+  </NavLink>
+  <p>
+    500
+    -
+    0
+  </p>
+</div>
+`;
