@@ -7,18 +7,13 @@ const AddExpense = (props) => {
         <div>
             <h2>Add Expense</h2>
             <ExpenseForm onSubmit={(expense) => {
-                // props.dispatch(addExpense(expense));
-                props.onSubmit(expense);
+                props.dispatch(addExpense(expense));
                 props.history.push('/')
             }} />
         </div>
     );
 
 };
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onSubmit: (expense) => dispatch(addExpense(expense)) 
-    }
-}
-const Connected = connect(undefined,)(AddExpense);
+
+const Connected = connect()(AddExpense);
 export default Connected;
