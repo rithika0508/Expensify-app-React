@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SingleExpense from './SingleExpense';
-import visibleexpenses from '../selectors/expenses'
+import visibleexpenses from '../selectors/expenses';
 
 
 export const AllExpenses = (props) => {

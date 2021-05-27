@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { SingleDatePicker } from 'react-dates';
 import moment from 'moment';
 export default class ExpenseForm extends React.Component {
@@ -33,6 +32,9 @@ export default class ExpenseForm extends React.Component {
             }
             this.props.onSubmit(expense)
         }
+    }
+    deleteExpense = () => {
+        this.props.deleteExpense(this.props.expense)
     }
     render() {
         return (
@@ -71,6 +73,7 @@ export default class ExpenseForm extends React.Component {
                     onChange={(e) => this.setState(() => ({ note:e.target.value }))}></textarea>
                     <button>Add</button>
                 </form>
+                { this.props.expense && <button onClick={this.deleteExpense}>Remove Expense</button>}
             </div>
         );
     }
